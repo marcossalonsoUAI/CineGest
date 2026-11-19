@@ -1,0 +1,9 @@
+* text=auto
+*.vb   text eol=crlf
+*.sln  text eol=crlf
+*.vbproj text eol=crlf
+*.resx text eol=crlf
+*.sql  text eol=crlf
+*.pdf  binary
+*.png  binary
+*.jpg  binary

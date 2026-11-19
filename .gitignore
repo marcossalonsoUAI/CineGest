@@ -1,0 +1,30 @@
+# --- Visual Studio / .NET ---
+.vs/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.cache
+*.pdb
+*.log
+packages/
+*.nupkg
+TestResults/
+
+# --- Configuración local (cada uno tiene su propio servidor SQL) ---
+# Si deciden sacar la cadena de conexión a un archivo aparte, ignórenlo acá:
+# ConnectionStrings.config
+
+# --- SQL Server: nunca subir los archivos físicos de la base ---
+*.mdf
+*.ldf
+*.bak
+
+# --- Sistema operativo ---
+Thumbs.db
+desktop.ini
+.DS_Store
