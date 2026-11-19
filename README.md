@@ -5,7 +5,6 @@ Trabajo práctico integrador.
 
 ## Integrantes
 
-| Integrante |
 | Hector |
 | Gerardo |
 | Nicolas |
