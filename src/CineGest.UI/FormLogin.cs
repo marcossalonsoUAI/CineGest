@@ -16,5 +16,13 @@ namespace CineGest.UI
         {
             InitializeComponent();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            using (FormAdministracion admin = new FormAdministracion())
+            {
+                admin.ShowDialog(this);
+            }
+        }
     }
 }
