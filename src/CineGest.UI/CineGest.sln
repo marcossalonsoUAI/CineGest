@@ -5,6 +5,14 @@ VisualStudioVersion = 17.14.37012.4 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineGest.UI", "CineGest.UI.csproj", "{CE2C8B32-4EDA-428A-9214-BEBECE97E59B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineGest.BE", "..\CineGest.BE\CineGest.BE.csproj", "{DCF66666-1D0D-4E1E-B44E-2E5500A47B31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineGest.MAPPER", "..\CineGest.MAPPER\CineGest.MAPPER.csproj", "{97719818-63EA-4F6D-9DF3-6446E57222BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineGest.DAL", "..\CineGest.DAL\CineGest.DAL.csproj", "{BC70B25A-34B6-4BF2-B3A8-50BA7ABB13B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineGest.BLL", "..\CineGest.BLL\CineGest.BLL.csproj", "{CBBCF3FC-3878-4804-9817-31366E824ED7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{CE2C8B32-4EDA-428A-9214-BEBECE97E59B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE2C8B32-4EDA-428A-9214-BEBECE97E59B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE2C8B32-4EDA-428A-9214-BEBECE97E59B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF66666-1D0D-4E1E-B44E-2E5500A47B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF66666-1D0D-4E1E-B44E-2E5500A47B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF66666-1D0D-4E1E-B44E-2E5500A47B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF66666-1D0D-4E1E-B44E-2E5500A47B31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97719818-63EA-4F6D-9DF3-6446E57222BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97719818-63EA-4F6D-9DF3-6446E57222BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97719818-63EA-4F6D-9DF3-6446E57222BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97719818-63EA-4F6D-9DF3-6446E57222BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC70B25A-34B6-4BF2-B3A8-50BA7ABB13B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC70B25A-34B6-4BF2-B3A8-50BA7ABB13B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC70B25A-34B6-4BF2-B3A8-50BA7ABB13B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC70B25A-34B6-4BF2-B3A8-50BA7ABB13B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBBCF3FC-3878-4804-9817-31366E824ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBBCF3FC-3878-4804-9817-31366E824ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBBCF3FC-3878-4804-9817-31366E824ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBBCF3FC-3878-4804-9817-31366E824ED7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
