@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CineGest.BE;
 using CineGest.DAL;
 
@@ -14,8 +11,11 @@ namespace CineGest.BLL
 
         public List<Funcion> Listar() => _dal.Listar(false);
 
-        //Para la venta (RN04): solo se puede vender para funciones activas.
+        // Para la venta (RN04): solo se puede vender para funciones activas.
         public List<Funcion> ListarActivas() => _dal.Listar(true);
+
+        // ✅ NUEVO MÉTODO: Exposto desde la capa de negocios
+        public List<Funcion> ListarPorPelicula(int idPelicula) => _dal.ListarPorPelicula(idPelicula);
 
         public Funcion ObtenerPorId(int id) => _dal.ObtenerPorId(id);
 
@@ -44,8 +44,6 @@ namespace CineGest.BLL
             _dal.CambiarEstado(id, false);
         }
 
-        //Al reactivar se vuelven a controlar RN02 y RN03: mientras estuvo inactiva
-        //pudo desactivarse la película o programarse otra función en ese horario.
         public void Activar(int id)
         {
             var f = _dal.ObtenerPorId(id);
@@ -68,11 +66,11 @@ namespace CineGest.BLL
             if (!_dal.ObtenerDatosPelicula(f.IdPelicula, out bool peliculaActiva, out int duracion))
                 throw new InvalidOperationException("La película seleccionada no existe.");
 
-            //RN02: no se pueden programar funciones de películas inactivas.
+            // RN02: no se pueden programar funciones de películas inactivas.
             if (!peliculaActiva)
                 throw new InvalidOperationException("No se pueden programar funciones de películas inactivas.");
 
-            //RN03: no puede haber dos funciones superpuestas en la misma sala.
+            // RN03: no puede haber dos funciones superpuestas en la misma sala.
             DateTime fin = f.FechaHora.AddMinutes(duracion);
             if (_dal.HaySuperposicion(f.IdSala, f.FechaHora, fin, idExcluir))
                 throw new InvalidOperationException("La sala ya tiene una función programada en ese horario.");

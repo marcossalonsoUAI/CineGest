@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CineGest.BE;
 using CineGest.MAPPER;
 
@@ -31,6 +28,23 @@ INNER JOIN SALA s     ON s.ID_SALA = f.ID_SALA";
             }
         }
 
+        // ✅ NUEVO MÉTODO: Trae solo las funciones activas de una película específica
+        public List<Funcion> ListarPorPelicula(int idPelicula)
+        {
+            string sql = SqlSelect + " WHERE f.ID_PELICULA = @idPelicula AND f.ESTADO = 1 ORDER BY f.FECHA_HORA";
+            using (var cn = Conexion.Crear())
+            using (var cmd = new SqlCommand(sql, cn))
+            {
+                cmd.Parameters.Add("@idPelicula", SqlDbType.Int).Value = idPelicula;
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    var tabla = new DataTable();
+                    da.Fill(tabla);
+                    return FuncionMapper.ALista(tabla);
+                }
+            }
+        }
+
         public Funcion ObtenerPorId(int id)
         {
             string sql = SqlSelect + " WHERE f.ID_FUNCION = @id";
@@ -44,7 +58,6 @@ INNER JOIN SALA s     ON s.ID_SALA = f.ID_SALA";
             }
         }
 
-        //Devuelve false si la película no existe.
         public bool ObtenerDatosPelicula(int idPelicula, out bool activa, out int duracion)
         {
             const string sql = "SELECT ESTADO, DURACION FROM PELICULA WHERE ID_PELICULA = @id";
@@ -71,8 +84,6 @@ INNER JOIN SALA s     ON s.ID_SALA = f.ID_SALA";
                 new SqlParameter("@id", SqlDbType.Int) { Value = idSala }) > 0;
         }
 
-        //RN03: hay superposición si alguna función ACTIVA de la misma sala
-        //empieza antes de que termine la nueva y termina después de que empiece la nueva.
         public bool HaySuperposicion(int idSala, DateTime inicio, DateTime fin, int idExcluir)
         {
             const string sql = @"
@@ -127,7 +138,6 @@ WHERE f.ID_SALA = @idSala
             }
         }
 
-        //Baja lógica: las funciones no se borran porque ENTRADA las referencia.
         public void CambiarEstado(int id, bool activa)
         {
             const string sql = "UPDATE FUNCION SET ESTADO = @estado WHERE ID_FUNCION = @id";
