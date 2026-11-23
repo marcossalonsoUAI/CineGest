@@ -29,86 +29,65 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtTitulo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDuracion = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtGenero = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtDirector = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.chkEstado = new System.Windows.Forms.CheckBox();
-            this.btnPelGuardar = new System.Windows.Forms.Button();
-            this.btnPelEditar = new System.Windows.Forms.Button();
-            this.btnPelBorrar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.cmbPelicula = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnPelBorrar = new System.Windows.Forms.Button();
+            this.btnPelEditar = new System.Windows.Forms.Button();
+            this.btnPelGuardar = new System.Windows.Forms.Button();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDirector = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtGenero = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDuracion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgvSalas = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cmbSalas = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtNomSala = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtCapacidadSala = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtTipoSala = new System.Windows.Forms.TextBox();
-            this.btnSalaGuardar = new System.Windows.Forms.Button();
-            this.btnSalaEditar = new System.Windows.Forms.Button();
             this.btnSalaBorrar = new System.Windows.Forms.Button();
+            this.btnSalaEditar = new System.Windows.Forms.Button();
+            this.btnSalaGuardar = new System.Windows.Forms.Button();
+            this.txtTipoSala = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtCapacidadSala = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNomSala = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cmbSalas = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dgvSalas = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(401, 37);
+            this.label1.Location = new System.Drawing.Point(875, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "PANEL DE ADMINISTRADOR";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(661, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "PARA CARGAR PELÍCULAS Y FUNCIONES EN LA DB, QUE VAN A ACTUALIZAR LAS GRILLAS DEL " +
-    "FormPrincipal";
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.dgvPeliculas);
-            this.groupBox1.Location = new System.Drawing.Point(12, 122);
+            this.groupBox1.Location = new System.Drawing.Point(321, 121);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(565, 335);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ABM Peliculas";
-            // 
-            // dgvPeliculas
-            // 
-            this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeliculas.Location = new System.Drawing.Point(6, 19);
-            this.dgvPeliculas.Name = "dgvPeliculas";
-            this.dgvPeliculas.Size = new System.Drawing.Size(553, 150);
-            this.dgvPeliculas.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -127,115 +106,30 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtTitulo);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(6, 175);
+            this.groupBox2.Location = new System.Drawing.Point(321, 349);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(553, 151);
+            this.groupBox2.Size = new System.Drawing.Size(565, 160);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Crear - Editar - Borrar";
             // 
-            // label3
+            // cmbPelicula
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Título";
+            this.cmbPelicula.FormattingEnabled = true;
+            this.cmbPelicula.Location = new System.Drawing.Point(6, 35);
+            this.cmbPelicula.Name = "cmbPelicula";
+            this.cmbPelicula.Size = new System.Drawing.Size(190, 21);
+            this.cmbPelicula.TabIndex = 14;
+            this.cmbPelicula.SelectedIndexChanged += new System.EventHandler(this.cmbPelicula_SelectedIndexChanged);
             // 
-            // txtTitulo
+            // label8
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(6, 83);
-            this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(100, 20);
-            this.txtTitulo.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(132, 106);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Duración (minutos)";
-            // 
-            // txtDuracion
-            // 
-            this.txtDuracion.Location = new System.Drawing.Point(135, 122);
-            this.txtDuracion.Name = "txtDuracion";
-            this.txtDuracion.Size = new System.Drawing.Size(100, 20);
-            this.txtDuracion.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(132, 67);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Generos";
-            // 
-            // txtGenero
-            // 
-            this.txtGenero.Location = new System.Drawing.Point(135, 83);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(100, 20);
-            this.txtGenero.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 106);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Director";
-            // 
-            // txtDirector
-            // 
-            this.txtDirector.Location = new System.Drawing.Point(6, 122);
-            this.txtDirector.Name = "txtDirector";
-            this.txtDirector.Size = new System.Drawing.Size(100, 20);
-            this.txtDirector.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(262, 67);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Estado";
-            // 
-            // chkEstado
-            // 
-            this.chkEstado.AutoSize = true;
-            this.chkEstado.Location = new System.Drawing.Point(265, 83);
-            this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(84, 17);
-            this.chkEstado.TabIndex = 9;
-            this.chkEstado.Text = "En Cartelera";
-            this.chkEstado.UseVisualStyleBackColor = true;
-            // 
-            // btnPelGuardar
-            // 
-            this.btnPelGuardar.Location = new System.Drawing.Point(472, 62);
-            this.btnPelGuardar.Name = "btnPelGuardar";
-            this.btnPelGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnPelGuardar.TabIndex = 10;
-            this.btnPelGuardar.Text = "Guardar";
-            this.btnPelGuardar.UseVisualStyleBackColor = true;
-            this.btnPelGuardar.Click += new System.EventHandler(this.btnPelGuardar_Click);
-            // 
-            // btnPelEditar
-            // 
-            this.btnPelEditar.Location = new System.Drawing.Point(472, 91);
-            this.btnPelEditar.Name = "btnPelEditar";
-            this.btnPelEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnPelEditar.TabIndex = 11;
-            this.btnPelEditar.Text = "Editar";
-            this.btnPelEditar.UseVisualStyleBackColor = true;
-            this.btnPelEditar.Click += new System.EventHandler(this.btnPelEditar_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(193, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Seleccionar la Pelicula a Editar o Borrar";
             // 
             // btnPelBorrar
             // 
@@ -247,42 +141,134 @@
             this.btnPelBorrar.UseVisualStyleBackColor = true;
             this.btnPelBorrar.Click += new System.EventHandler(this.btnPelBorrar_Click);
             // 
-            // label8
+            // btnPelEditar
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 19);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(193, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Seleccionar la Pelicula a Editar o Borrar";
+            this.btnPelEditar.Location = new System.Drawing.Point(472, 91);
+            this.btnPelEditar.Name = "btnPelEditar";
+            this.btnPelEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnPelEditar.TabIndex = 11;
+            this.btnPelEditar.Text = "Editar";
+            this.btnPelEditar.UseVisualStyleBackColor = true;
+            this.btnPelEditar.Click += new System.EventHandler(this.btnPelEditar_Click);
             // 
-            // cmbPelicula
+            // btnPelGuardar
             // 
-            this.cmbPelicula.FormattingEnabled = true;
-            this.cmbPelicula.Location = new System.Drawing.Point(6, 35);
-            this.cmbPelicula.Name = "cmbPelicula";
-            this.cmbPelicula.Size = new System.Drawing.Size(190, 21);
-            this.cmbPelicula.TabIndex = 14;
-            this.cmbPelicula.SelectedIndexChanged += new System.EventHandler(this.cmbPelicula_SelectedIndexChanged);
+            this.btnPelGuardar.Location = new System.Drawing.Point(472, 62);
+            this.btnPelGuardar.Name = "btnPelGuardar";
+            this.btnPelGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnPelGuardar.TabIndex = 10;
+            this.btnPelGuardar.Text = "Guardar";
+            this.btnPelGuardar.UseVisualStyleBackColor = true;
+            this.btnPelGuardar.Click += new System.EventHandler(this.btnPelGuardar_Click);
+            // 
+            // chkEstado
+            // 
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.Location = new System.Drawing.Point(265, 83);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(84, 17);
+            this.chkEstado.TabIndex = 9;
+            this.chkEstado.Text = "En Cartelera";
+            this.chkEstado.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(262, 67);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Estado";
+            // 
+            // txtDirector
+            // 
+            this.txtDirector.Location = new System.Drawing.Point(6, 122);
+            this.txtDirector.Name = "txtDirector";
+            this.txtDirector.Size = new System.Drawing.Size(100, 20);
+            this.txtDirector.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 106);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Director";
+            // 
+            // txtGenero
+            // 
+            this.txtGenero.Location = new System.Drawing.Point(135, 83);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(100, 20);
+            this.txtGenero.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(132, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Generos";
+            // 
+            // txtDuracion
+            // 
+            this.txtDuracion.Location = new System.Drawing.Point(135, 122);
+            this.txtDuracion.Name = "txtDuracion";
+            this.txtDuracion.Size = new System.Drawing.Size(100, 20);
+            this.txtDuracion.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(132, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Duración (minutos)";
+            // 
+            // txtTitulo
+            // 
+            this.txtTitulo.Location = new System.Drawing.Point(6, 83);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(100, 20);
+            this.txtTitulo.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Título";
+            // 
+            // dgvPeliculas
+            // 
+            this.dgvPeliculas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeliculas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPeliculas.Location = new System.Drawing.Point(3, 16);
+            this.dgvPeliculas.MultiSelect = false;
+            this.dgvPeliculas.Name = "dgvPeliculas";
+            this.dgvPeliculas.ReadOnly = true;
+            this.dgvPeliculas.RowHeadersVisible = false;
+            this.dgvPeliculas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvPeliculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPeliculas.Size = new System.Drawing.Size(559, 316);
+            this.dgvPeliculas.TabIndex = 0;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.dgvSalas);
-            this.groupBox3.Location = new System.Drawing.Point(685, 122);
+            this.groupBox3.Location = new System.Drawing.Point(1051, 121);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(399, 335);
+            this.groupBox3.Size = new System.Drawing.Size(581, 375);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ABM Salas";
-            // 
-            // dgvSalas
-            // 
-            this.dgvSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSalas.Location = new System.Drawing.Point(7, 19);
-            this.dgvSalas.Name = "dgvSalas";
-            this.dgvSalas.Size = new System.Drawing.Size(382, 150);
-            this.dgvSalas.TabIndex = 0;
             // 
             // groupBox4
             // 
@@ -297,62 +283,49 @@
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.cmbSalas);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Location = new System.Drawing.Point(7, 178);
+            this.groupBox4.Location = new System.Drawing.Point(0, 228);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(382, 148);
+            this.groupBox4.Size = new System.Drawing.Size(581, 147);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Crear - Editar - Borrar";
             // 
-            // label9
+            // btnSalaBorrar
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(177, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Seleccionar la Sala a Editar o Borrar";
+            this.btnSalaBorrar.Location = new System.Drawing.Point(472, 112);
+            this.btnSalaBorrar.Name = "btnSalaBorrar";
+            this.btnSalaBorrar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalaBorrar.TabIndex = 10;
+            this.btnSalaBorrar.Text = "Borrar";
+            this.btnSalaBorrar.UseVisualStyleBackColor = true;
+            this.btnSalaBorrar.Click += new System.EventHandler(this.btnSalaBorrar_Click);
             // 
-            // cmbSalas
+            // btnSalaEditar
             // 
-            this.cmbSalas.FormattingEnabled = true;
-            this.cmbSalas.Location = new System.Drawing.Point(9, 32);
-            this.cmbSalas.Name = "cmbSalas";
-            this.cmbSalas.Size = new System.Drawing.Size(174, 21);
-            this.cmbSalas.TabIndex = 1;
-            this.cmbSalas.SelectedIndexChanged += new System.EventHandler(this.cmbSalas_SelectedIndexChanged);
+            this.btnSalaEditar.Location = new System.Drawing.Point(472, 83);
+            this.btnSalaEditar.Name = "btnSalaEditar";
+            this.btnSalaEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalaEditar.TabIndex = 9;
+            this.btnSalaEditar.Text = "Editar";
+            this.btnSalaEditar.UseVisualStyleBackColor = true;
+            this.btnSalaEditar.Click += new System.EventHandler(this.btnSalaEditar_Click);
             // 
-            // label10
+            // btnSalaGuardar
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 64);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 13);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Nombre";
+            this.btnSalaGuardar.Location = new System.Drawing.Point(472, 54);
+            this.btnSalaGuardar.Name = "btnSalaGuardar";
+            this.btnSalaGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalaGuardar.TabIndex = 8;
+            this.btnSalaGuardar.Text = "Guardar";
+            this.btnSalaGuardar.UseVisualStyleBackColor = true;
+            this.btnSalaGuardar.Click += new System.EventHandler(this.btnSalaGuardar_Click);
             // 
-            // txtNomSala
+            // txtTipoSala
             // 
-            this.txtNomSala.Location = new System.Drawing.Point(6, 80);
-            this.txtNomSala.Name = "txtNomSala";
-            this.txtNomSala.Size = new System.Drawing.Size(100, 20);
-            this.txtNomSala.TabIndex = 3;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 103);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 13);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Capacidad";
-            // 
-            // txtCapacidadSala
-            // 
-            this.txtCapacidadSala.Location = new System.Drawing.Point(6, 119);
-            this.txtCapacidadSala.Name = "txtCapacidadSala";
-            this.txtCapacidadSala.Size = new System.Drawing.Size(100, 20);
-            this.txtCapacidadSala.TabIndex = 5;
+            this.txtTipoSala.Location = new System.Drawing.Point(136, 80);
+            this.txtTipoSala.Name = "txtTipoSala";
+            this.txtTipoSala.Size = new System.Drawing.Size(100, 20);
+            this.txtTipoSala.TabIndex = 7;
             // 
             // label12
             // 
@@ -363,63 +336,92 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "Tipo";
             // 
-            // txtTipoSala
+            // txtCapacidadSala
             // 
-            this.txtTipoSala.Location = new System.Drawing.Point(136, 80);
-            this.txtTipoSala.Name = "txtTipoSala";
-            this.txtTipoSala.Size = new System.Drawing.Size(100, 20);
-            this.txtTipoSala.TabIndex = 7;
+            this.txtCapacidadSala.Location = new System.Drawing.Point(6, 119);
+            this.txtCapacidadSala.Name = "txtCapacidadSala";
+            this.txtCapacidadSala.Size = new System.Drawing.Size(100, 20);
+            this.txtCapacidadSala.TabIndex = 5;
             // 
-            // btnSalaGuardar
+            // label11
             // 
-            this.btnSalaGuardar.Location = new System.Drawing.Point(298, 59);
-            this.btnSalaGuardar.Name = "btnSalaGuardar";
-            this.btnSalaGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalaGuardar.TabIndex = 8;
-            this.btnSalaGuardar.Text = "Guardar";
-            this.btnSalaGuardar.UseVisualStyleBackColor = true;
-            this.btnSalaGuardar.Click += new System.EventHandler(this.btnSalaGuardar_Click);
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 103);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 13);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Capacidad";
             // 
-            // btnSalaEditar
+            // txtNomSala
             // 
-            this.btnSalaEditar.Location = new System.Drawing.Point(298, 88);
-            this.btnSalaEditar.Name = "btnSalaEditar";
-            this.btnSalaEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalaEditar.TabIndex = 9;
-            this.btnSalaEditar.Text = "Editar";
-            this.btnSalaEditar.UseVisualStyleBackColor = true;
-            this.btnSalaEditar.Click += new System.EventHandler(this.btnSalaEditar_Click);
+            this.txtNomSala.Location = new System.Drawing.Point(6, 80);
+            this.txtNomSala.Name = "txtNomSala";
+            this.txtNomSala.Size = new System.Drawing.Size(100, 20);
+            this.txtNomSala.TabIndex = 3;
             // 
-            // btnSalaBorrar
+            // label10
             // 
-            this.btnSalaBorrar.Location = new System.Drawing.Point(298, 117);
-            this.btnSalaBorrar.Name = "btnSalaBorrar";
-            this.btnSalaBorrar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalaBorrar.TabIndex = 10;
-            this.btnSalaBorrar.Text = "Borrar";
-            this.btnSalaBorrar.UseVisualStyleBackColor = true;
-            this.btnSalaBorrar.Click += new System.EventHandler(this.btnSalaBorrar_Click);
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 64);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Nombre";
+            // 
+            // cmbSalas
+            // 
+            this.cmbSalas.FormattingEnabled = true;
+            this.cmbSalas.Location = new System.Drawing.Point(9, 32);
+            this.cmbSalas.Name = "cmbSalas";
+            this.cmbSalas.Size = new System.Drawing.Size(174, 21);
+            this.cmbSalas.TabIndex = 1;
+            this.cmbSalas.SelectedIndexChanged += new System.EventHandler(this.cmbSalas_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(177, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Seleccionar la Sala a Editar o Borrar";
+            // 
+            // dgvSalas
+            // 
+            this.dgvSalas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSalas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSalas.Location = new System.Drawing.Point(3, 16);
+            this.dgvSalas.MultiSelect = false;
+            this.dgvSalas.Name = "dgvSalas";
+            this.dgvSalas.ReadOnly = true;
+            this.dgvSalas.RowHeadersVisible = false;
+            this.dgvSalas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvSalas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSalas.Size = new System.Drawing.Size(575, 356);
+            this.dgvSalas.TabIndex = 0;
             // 
             // FormAdministracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 508);
+            this.BackColor = System.Drawing.Color.LightCoral;
+            this.ClientSize = new System.Drawing.Size(1799, 539);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormAdministracion";
             this.Text = "FormAdministracion";
             this.Load += new System.EventHandler(this.FormAdministracion_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,7 +430,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvPeliculas;
         private System.Windows.Forms.GroupBox groupBox2;
