@@ -44,10 +44,12 @@
   <ItemGroup>
     <Compile Include="ClienteMapper.cs" />
     <Compile Include="ConsultaMapper.cs" />
+    <Compile Include="EntradaMapper.cs" />
     <Compile Include="FuncionMapper.cs" />
     <Compile Include="PeliculaMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalaMapper.cs" />
+    <Compile Include="UsuarioMapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CineGest.BE\CineGest.BE.csproj">
