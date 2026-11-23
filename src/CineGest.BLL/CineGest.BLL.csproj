@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="ClienteBLL.cs" />
     <Compile Include="ConsultaBLL.cs" />
+    <Compile Include="FuncionBLL.cs" />
     <Compile Include="PeliculaBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalaBLL.cs" />
