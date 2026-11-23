@@ -44,7 +44,9 @@
   <ItemGroup>
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="PeliculaDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalaDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CineGest.BE\CineGest.BE.csproj">
