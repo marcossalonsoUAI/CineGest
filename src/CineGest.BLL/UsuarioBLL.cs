@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CineGest.BE;
 using CineGest.DAL;
 
@@ -19,6 +16,9 @@ namespace CineGest.BLL
         public static Usuario UsuarioActual { get; private set; }
         public static bool EsAdmin => UsuarioActual != null && UsuarioActual.Rol == RolAdmin;
 
+        // ==========================================================
+        // LOGIN / LOGOUT
+        // ==========================================================
         public Usuario Login(string nombreUsuario, string password)
         {
             nombreUsuario = (nombreUsuario ?? "").Trim();
@@ -41,6 +41,16 @@ namespace CineGest.BLL
             UsuarioActual = null;
         }
 
+        // ==========================================================
+        // LISTAR
+        // ==========================================================
+        public List<Usuario> Listar() => _dal.Listar();
+
+        public Usuario ObtenerPorId(int id) => _dal.ObtenerPorId(id);
+
+        // ==========================================================
+        // ALTA
+        // ==========================================================
         public int Alta(string nombreUsuario, string password, string rol)
         {
             if (!EsAdmin)
@@ -64,6 +74,63 @@ namespace CineGest.BLL
                 PasswordHash = Seguridad.Sha256(password),
                 Rol = rol
             });
+        }
+
+        // ==========================================================
+        // BAJA (eliminar usuario)
+        // ==========================================================
+        public void Baja(int id)
+        {
+            if (!EsAdmin)
+                throw new InvalidOperationException("Solo un administrador puede eliminar usuarios.");
+
+            if (id <= 0)
+                throw new InvalidOperationException("Seleccioná un usuario para eliminar.");
+
+            var usuario = _dal.ObtenerPorId(id);
+            if (usuario == null)
+                throw new InvalidOperationException("El usuario no existe.");
+
+            // Proteger el usuario maestro
+            if (string.Equals(usuario.NombreUsuario, "ADMIN", StringComparison.OrdinalIgnoreCase))
+                throw new InvalidOperationException("No se puede eliminar el usuario ADMIN principal.");
+
+            // No permitir que el usuario logueado se elimine a sí mismo
+            if (UsuarioActual != null && UsuarioActual.Id == id)
+                throw new InvalidOperationException("No podés eliminar tu propio usuario en sesión.");
+
+            _dal.Eliminar(id);
+        }
+        // ==========================================================
+        // CAMBIAR CONTRASEÑA
+        // ==========================================================
+        public void CambiarContrasena(int idUsuario, string passActual, string nuevaPass)
+        {
+            // 1. Validaciones básicas
+            if (idUsuario <= 0)
+                throw new InvalidOperationException("Usuario inválido.");
+            if (string.IsNullOrWhiteSpace(passActual))
+                throw new InvalidOperationException("Debe ingresar su contraseña actual.");
+            if (string.IsNullOrWhiteSpace(nuevaPass) || nuevaPass.Length < 4)
+                throw new InvalidOperationException("La nueva contraseña debe tener al menos 4 caracteres.");
+
+            // 2. Obtener el usuario de la base de datos
+            var usuario = _dal.ObtenerPorId(idUsuario);
+            if (usuario == null)
+                throw new InvalidOperationException("El usuario no existe en el sistema.");
+
+            // 3. Verificar que la contraseña actual sea correcta
+            string hashPassActual = Seguridad.Sha256(passActual);
+            if (!string.Equals(usuario.PasswordHash, hashPassActual, StringComparison.OrdinalIgnoreCase))
+                throw new InvalidOperationException("La contraseña actual es incorrecta.");
+
+            // 4. Evitar que la nueva contraseña sea igual a la actual
+            string hashNuevaPass = Seguridad.Sha256(nuevaPass);
+            if (string.Equals(usuario.PasswordHash, hashNuevaPass, StringComparison.OrdinalIgnoreCase))
+                throw new InvalidOperationException("La nueva contraseña debe ser diferente a la actual.");
+
+            // 5. Actualizar en la base de datos
+            _dal.ActualizarPassword(idUsuario, hashNuevaPass);
         }
     }
 }

@@ -1,10 +1,7 @@
-﻿using System;
+﻿using CineGest.BE;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CineGest.BE;
 
 namespace CineGest.MAPPER
 {
@@ -15,10 +12,18 @@ namespace CineGest.MAPPER
             return new Usuario
             {
                 Id = Convert.ToInt32(fila["ID_USUARIO"]),
-                NombreUsuario = Convert.ToString(fila["NOMBRE_USUARIO"]),
-                PasswordHash = Convert.ToString(fila["PASSWORD_HASH"]),
-                Rol = Convert.ToString(fila["ROL"])
+                NombreUsuario = fila["NOMBRE_USUARIO"].ToString(),
+                PasswordHash = fila["PASSWORD_HASH"] == DBNull.Value ? null : fila["PASSWORD_HASH"].ToString(),
+                Rol = fila["ROL"].ToString()
             };
+        }
+
+        public static List<Usuario> ALista(DataTable tabla)
+        {
+            var lista = new List<Usuario>();
+            foreach (DataRow fila in tabla.Rows)
+                lista.Add(ADominio(fila));
+            return lista;
         }
     }
 }

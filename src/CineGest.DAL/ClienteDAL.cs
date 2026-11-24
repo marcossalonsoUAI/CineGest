@@ -51,6 +51,18 @@ namespace CineGest.DAL
                 return (int)cmd.ExecuteScalar() > 0;
             }
         }
+        public Cliente ObtenerPorDni(string dni)
+        {
+            const string sql = "SELECT ID_CLIENTE, NOMBRE, APELLIDO, DNI, EMAIL FROM CLIENTE WHERE DNI = @dni";
+            using (var cn = Conexion.Crear())
+            using (var da = new SqlDataAdapter(sql, cn))
+            {
+                da.SelectCommand.Parameters.AddWithValue("@dni", dni);
+                var tabla = new DataTable();
+                da.Fill(tabla);
+                return tabla.Rows.Count == 0 ? null : ClienteMapper.ADominio(tabla.Rows[0]);
+            }
+        }
 
         public int Insertar(Cliente c)
         {

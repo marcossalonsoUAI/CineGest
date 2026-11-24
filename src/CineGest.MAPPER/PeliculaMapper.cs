@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CineGest.MAPPER
 {
@@ -18,7 +15,7 @@ namespace CineGest.MAPPER
                 Titulo = (string)fila["TITULO"],
                 Genero = (string)fila["GENERO"],
                 Duracion = (int)fila["DURACION"],
-                Director = (string)fila["DIRECTOR"],
+                Director = fila["DIRECTOR"] == DBNull.Value ? "" : (string)fila["DIRECTOR"],
                 Estado = (bool)fila["ESTADO"]
             };
         }

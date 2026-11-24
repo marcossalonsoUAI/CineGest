@@ -17,13 +17,13 @@ namespace CineGest.UI
         private Funcion _funcion;
 
         private List<string> butacasSeleccionadas = new List<string>();
-        private List<string> butacasOcupadas = new List<string> { "B5", "C7", "D3" }; // Simulado, luego vendrá de la DB
+        // TODO: En el futuro, esta lista debe venir de la Base de Datos consultando las ventas de esta función
+        private List<string> butacasOcupadas = new List<string> { "B5", "C7", "D3" };
 
         private readonly Color _colorDisponible = Color.FromArgb(248, 250, 252);
         private readonly Color _colorSeleccionada = Color.FromArgb(37, 99, 235);
         private readonly Color _colorOcupada = Color.FromArgb(220, 38, 38);
 
-        //  NUEVO CONSTRUCTOR que recibe los datos seleccionados
         public FormVenta(Pelicula pelicula, Funcion funcion)
         {
             InitializeComponent();
@@ -121,9 +121,10 @@ namespace CineGest.UI
                 btn.ForeColor = Color.White;
             }
 
+            decimal total = _funcion != null ? _funcion.Precio * butacasSeleccionadas.Count : 0;
             lblResumen.Text = butacasSeleccionadas.Count > 0
-                ? $"✅ Butacas: {string.Join(", ", butacasSeleccionadas)} |  {_pelicula?.Titulo} |  Total: ${(_funcion?.Precio * butacasSeleccionadas.Count):F2}"
-                : $" {_pelicula?.Titulo} | 🕒 {_funcion?.FechaHora:dd/MM/yyyy HH:mm}";
+                ? $"✅ Butacas: {string.Join(", ", butacasSeleccionadas)} | Total: ${total:F2}"
+                : $"🎬 {_pelicula?.Titulo} | 🕒 {_funcion?.FechaHora:dd/MM/yyyy HH:mm}";
         }
 
         private void btnContinuarCompra_Click(object sender, EventArgs e)
@@ -137,12 +138,13 @@ namespace CineGest.UI
             string peliculaNombre = _pelicula?.Titulo ?? "Película no especificada";
             string horarioStr = _funcion?.FechaHora.ToString("dd/MM/yyyy HH:mm") ?? "Sin horario";
             decimal precio = _funcion?.Precio ?? 0m;
+            int idFuncion = _funcion?.Id ?? 0;
 
-            using (FormConfirmarCompra frm = new FormConfirmarCompra(butacasSeleccionadas, peliculaNombre, horarioStr, precio))
+            using (FormConfirmarCompra frm = new FormConfirmarCompra(butacasSeleccionadas, peliculaNombre, horarioStr, precio, idFuncion))
             {
                 if (frm.ShowDialog(this) == DialogResult.OK)
                 {
-                    // TODO: Aquí iría la llamada a VentaBLL.RegistrarVenta(...)
+                    this.DialogResult = DialogResult.OK; // Indica al FormPrincipal que se completó una venta
                     this.Close();
                 }
             }

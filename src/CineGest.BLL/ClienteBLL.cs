@@ -76,5 +76,9 @@ namespace CineGest.BLL
                 catch (FormatException) { throw new InvalidOperationException("El email no tiene un formato válido."); }
             }
         }
+        public Cliente ObtenerPorDni(string dni)
+        {
+            return _dal.ObtenerPorDni(dni.Trim());
+        }
     }
 }
